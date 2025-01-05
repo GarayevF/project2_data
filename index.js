@@ -9,12 +9,11 @@ server.get("/api/search", (req, res) => {
 
   // Sorguya göre filtreleme
   const filteredRecipes = recipes.filter((recipe) => {
-    const { title, description, ingredients } = recipe;
+    const { title, description } = recipe;
 
     return (
       title.toLowerCase().includes(query) || 
-      description.toLowerCase().includes(query) || 
-      ingredients.some((ingredient) => ingredient.toLowerCase().includes(query))
+      description.toLowerCase().includes(query)
     );
   });
 
