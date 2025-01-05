@@ -14,10 +14,7 @@ server.get("/api/search", (req, res) => {
     return (
       title.toLowerCase().includes(query) || 
       description.toLowerCase().includes(query) ||
-      (Array.isArray(ingredients) &&
-      ingredients.some((ingredient) =>
-        ingredient.toLowerCase().includes(query)
-      ))
+      ingredients.toLowerCase().includes(query)
     );
   });
 
