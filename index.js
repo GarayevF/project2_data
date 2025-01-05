@@ -7,7 +7,6 @@ server.get("/api/search", (req, res) => {
   const query = req.query.q?.toLowerCase() || ""; 
   const recipes = router.db.get("recipes").value(); 
 
-  // Sorguya göre filtreleme
   const filteredRecipes = recipes.filter((recipe) => {
     const { title, description, ingredients } = recipe;
 
@@ -19,6 +18,41 @@ server.get("/api/search", (req, res) => {
   });
 
   res.json(filteredRecipes); 
+});
+
+server.get("/api/filter", (req, res) => {
+  try {
+    const { tags: tagsQuery, difficulty: difficultyQuery } = req.query;
+    const recipes = router.db.get("recipes").value();
+
+    if (!recipes) {
+      return res.status(404).json({ error: "Recipes not found" });
+    }
+
+    const filteredRecipes = recipes.filter((recipe) => {
+      const { tags, difficulty } = recipe;
+
+      const matchesTags = tagsQuery
+        ? Array.isArray(tags) &&
+          tagsQuery.split(",").every((tag) =>
+            tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
+          )
+        : true;
+
+      
+      const matchesDifficulty = difficultyQuery
+        ? difficultyQuery.toLowerCase() === difficulty?.toLowerCase()
+        : true;
+
+      
+      return matchesTags && matchesDifficulty;
+    });
+
+    res.json(filteredRecipes);
+  } catch (error) {
+    console.error("Error in /api/filter endpoint:", error.message);
+    res.status(500).json({ error: "Internal Server Error", details: error.message });
+  }
 });
 
 const port = process.env.PORT || 8080;
