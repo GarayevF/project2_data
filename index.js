@@ -32,14 +32,7 @@ server.get("/api/filter", (req, res) => {
     const filteredRecipes = recipes.filter((recipe) => {
       const { tags, difficulty } = recipe;
 
-      const matchesTags = tagsQuery
-        ? Array.isArray(tags) &&
-          tagsQuery.split(",").every((tag) =>
-            tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
-          )
-        : true;
-
-      
+      const matchesTags = tags.split(",").some(a => tagsQuery.toLowerCase() == a.toLowerCase())
       const matchesDifficulty = difficultyQuery
         ? difficultyQuery.toLowerCase() === difficulty?.toLowerCase()
         : true;
