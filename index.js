@@ -9,11 +9,15 @@ server.get("/api/search", (req, res) => {
 
   // Sorguya göre filtreleme
   const filteredRecipes = recipes.filter((recipe) => {
-    const { title, description } = recipe;
+    const { title, description, ingredients } = recipe;
 
     return (
       title.toLowerCase().includes(query) || 
-      description.toLowerCase().includes(query)
+      description.toLowerCase().includes(query) ||
+      (Array.isArray(ingredients) &&
+      ingredients.some((ingredient) =>
+        ingredient.toLowerCase().includes(query)
+      ))
     );
   });
 
