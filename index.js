@@ -134,7 +134,7 @@ server.patch("/api/update-order", (req, res) => {
     console.log(req.body)
     const { id, order } = req.body;
 
-    if (!Array.isArray(order)) {
+    if (!order || typeof order !== "object" || !order.id || !order.order) {
       return res.status(400).json({ error: "Invalid order format" });
     }
 
