@@ -141,7 +141,7 @@ server.patch("/api/update-order", (req, res) => {
     res.status(200).json({ message: "Order updated successfully" });
   } catch (error) {
     console.error("Error updating order:", error.message);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Internal Server Error 500." });
   }
 });
 
