@@ -102,18 +102,27 @@ server.get("/api/sort", (req, res) => {
   }
 });
 
-server.get("/recipes", (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
+server.patch("/api/update-order", (req, res) => {
+  try {
+    const { order } = req.body;
 
-  const startIndex = (page - 1) * limit;
-  const endIndex = startIndex + parseInt(limit);
+    if (!Array.isArray(order)) {
+      return res.status(400).json({ error: "Invalid order format" });
+    }
 
-  const recipes = router.db.get("recipes").value();
-  const paginatedRecipes = recipes.slice(startIndex, endIndex);
+    order.forEach(({ id, order }) => {
+      const recipe = router.db.get("recipes").find({ id }).value();
+      if (recipe) {
+        router.db.get("recipes").find({ id }).assign({ order }).write();
+      }
+    });
 
-  res.json(paginatedRecipes);
+    res.status(200).json({ message: "Order updated successfully" });
+  } catch (error) {
+    console.error("Error updating order:", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 });
-
 
 
 const port = process.env.PORT || 8080;
