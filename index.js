@@ -51,6 +51,57 @@ server.get("/api/filter", (req, res) => {
   }
 });
 
+server.get("/api/sort", (req, res) => {
+  try {
+    const { sortBy, order = "asc" } = req.query; 
+
+    if (!sortBy) {
+      return res.status(400).json({ error: "Missing sortBy parameter. Please provide a valid "sort by" value." });
+    }
+
+    const recipes = router.db.get("recipes").value();
+
+    if (!recipes) {
+      return res.status(404).json({ error: "Recipes not found" });
+    }
+
+    const sortedRecipes = recipes.sort((a, b) => {
+      let result = 0;
+
+      switch (sortBy.toLowerCase()) {
+        case "title":
+          result = a.title.localeCompare(b.title);
+          break;
+
+        case "date":
+          result = new Date(a.lastUpdated) - new Date(b.lastUpdated);
+          break;
+
+        case "tags":
+          result = (a.tags?.length || 0) - (b.tags?.length || 0);
+          break;
+
+        case "difficulty":
+          const difficultyOrder = { easy: 1, medium: 2, hard: 3 };
+          result =
+            (difficultyOrder[a.difficulty?.toLowerCase()] || 0) -
+            (difficultyOrder[b.difficulty?.toLowerCase()] || 0);
+          break;
+
+        default:
+          return res.status(400).json({ error: `Invalid sortBy value: ${sortBy}. Valid options are 'title', 'createdTime', 'tags', 'difficulty'.` });
+      }
+
+      return order.toLowerCase() === "desc" ? -result : result;
+    });
+
+    res.json(sortedRecipes);
+  } catch (error) {
+    console.error("Error in /api/sort endpoint:", error.message);
+    res.status(500).json({ error: "Internal Server Error", details: error.message });
+  }
+});
+
 const port = process.env.PORT || 8080;
 
 server.use(middlewares);
