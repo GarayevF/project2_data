@@ -138,6 +138,7 @@ server.patch("/api/update-order", (req, res) => {
 
 const port = process.env.PORT || 8080;
 
+server.use(cors());
 server.use(middlewares);
 server.use(router);
 
