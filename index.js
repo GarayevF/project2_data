@@ -102,6 +102,40 @@ server.get("/api/sort", (req, res) => {
   }
 });
 
+server.get("/recipes", (req, res) => {
+  const { page = 1, limit = 10 } = req.query;
+
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + parseInt(limit);
+
+  const recipes = router.db.get("recipes").value();
+  const paginatedRecipes = recipes.slice(startIndex, endIndex);
+
+  res.json(paginatedRecipes);
+});
+
+server.patch("/api/update-order", (req, res) => {
+  try {
+    const { order } = req.body;
+
+    if (!Array.isArray(order)) {
+      return res.status(400).json({ error: "Invalid order format" });
+    }
+
+    order.forEach(({ id, order }) => {
+      const recipe = router.db.get("recipes").find({ id }).value();
+      if (recipe) {
+        router.db.get("recipes").find({ id }).assign({ order }).write();
+      }
+    });
+
+    res.status(200).json({ message: "Order updated successfully" });
+  } catch (error) {
+    console.error("Error updating order:", error.message);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
 const port = process.env.PORT || 8080;
 
 server.use(middlewares);
