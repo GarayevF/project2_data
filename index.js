@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const jsonServer = require("json-server");
 
-const app = express();
+const server = express();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
@@ -141,10 +141,10 @@ server.patch("/api/update-order", (req, res) => {
 
 const port = process.env.PORT || 8080;
 
-app.use(cors());
+server.use(cors());
 
-app.use(middlewares);
+server.use(middlewares);
 
-app.use("/api", router);
+server.use("/api", router);
 
-app.listen(port);
+server.listen(port);
