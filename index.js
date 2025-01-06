@@ -138,8 +138,8 @@ server.patch("/api/update-order", (req, res) => {
     }
 
     const recipe = router.db.get("recipes").find({ id }).value();
-    console.log(router.db.get("recipes"))
-    console.log(router.db.get("recipes").find({ id }))
+    console.log(router.db.get("recipes").toString())
+    console.log(router.db.get("recipes").find({ id }).toString())
     console.log(recipe)
     if (recipe) {
       router.db.get("recipes").find({ id }).assign({ order }).write();
