@@ -1,5 +1,8 @@
-const jsonServer = require("json-server"); 
-const server = jsonServer.create();
+const express = require("express");
+const cors = require("cors");
+const jsonServer = require("json-server");
+
+const app = express();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
@@ -138,7 +141,10 @@ server.patch("/api/update-order", (req, res) => {
 
 const port = process.env.PORT || 8080;
 
-server.use(middlewares);
-server.use(router);
+app.use(cors());
+
+app.use(middlewares);
+
+app.use("/api", router);
 
 server.listen(port);
