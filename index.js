@@ -107,7 +107,7 @@ server.get("/api/sort", (req, res) => {
           break;
 
         default:
-          return res.status(400).json({ error: `Invalid sortBy value: ${sortBy}. Valid options are 'title', 'createdTime', 'tags', 'difficulty'.` });
+          return res.status(400).json({ error: `Invalid sortBy value: ${sortBy}. Valid options are 'title', 'date', 'tags', 'difficulty'.` });
       }
 
       return order.toLowerCase() === "desc" ? -result : result;
