@@ -1,8 +1,5 @@
-const express = require("express");
-const cors = require("cors");
-const jsonServer = require("json-server");
-
-const server = express();
+const jsonServer = require("json-server"); 
+const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
@@ -117,34 +114,11 @@ server.get("/recipes", (req, res) => {
   res.json(paginatedRecipes);
 });
 
-server.patch("/api/update-order", (req, res) => {
-  try {
-    const { order } = req.body;
 
-    if (!Array.isArray(order)) {
-      return res.status(400).json({ error: "Invalid order format" });
-    }
-
-    order.forEach(({ id, order }) => {
-      const recipe = router.db.get("recipes").find({ id }).value();
-      if (recipe) {
-        router.db.get("recipes").find({ id }).assign({ order }).write();
-      }
-    });
-
-    res.status(200).json({ message: "Order updated successfully" });
-  } catch (error) {
-    console.error("Error updating order:", error.message);
-    res.status(500).json({ error: "Internal Server Error" });
-  }
-});
 
 const port = process.env.PORT || 8080;
 
-server.use(cors());
-
 server.use(middlewares);
-
-server.use("/api", router);
+server.use(router);
 
 server.listen(port);
