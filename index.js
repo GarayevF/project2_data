@@ -132,19 +132,25 @@ server.get("/recipes", (req, res) => {
 server.patch("/api/update-order", (req, res) => {
   try {
     console.log(req.body)
-    const { id, order } = req.body;
+    const { id, newIndex } = req.body;
 
     //if (!order || typeof order !== "object" || !order.id || !order.order) {
     //  return res.status(400).json({ error: "Invalid order format" });
     //}
 
-    const recipe = router.db.get("recipes").find({ id }).value();
-    console.log(router.db.get("recipes").toString())
-    console.log(router.db.get("recipes").find({ id }).toString())
-    console.log(recipe)
-    if (recipe) {
-      router.db.get("recipes").find({ id }).assign({ order }).write();
+    const recipes = router.db.get("recipes").value();
+
+    
+    const currentIndex = recipes.findIndex((recipe) => recipe.id === id);
+    if (currentIndex === -1) {
+      return res.status(404).json({ error: `Recipe with id ${id} not found` });
     }
+    
+    const [movedRecipe] = recipes.splice(currentIndex, 1);
+    
+    recipes.splice(newIndex, 0, movedRecipe);
+
+    router.db.set("recipes", recipes).write();
     
 
     res.status(200).json({ message: "Order updated successfully" });
