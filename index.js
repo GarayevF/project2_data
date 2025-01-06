@@ -125,6 +125,7 @@ server.get("/recipes", (req, res) => {
 
 server.patch("/api/update-order", (req, res) => {
   try {
+    console.log(req.body)
     const { order } = req.body;
 
     if (!Array.isArray(order)) {
