@@ -131,18 +131,19 @@ server.get("/recipes", (req, res) => {
 
 server.patch("/api/update-order", (req, res) => {
   try {
-    console.log(req.body)
     const { id, order } = req.body;
 
     if (!order || typeof order !== "object" || !order.id || !order.order) {
       return res.status(400).json({ error: "Invalid order format" });
     }
 
-    
-      const recipe = router.db.get("recipes").find({ id }).value();
-      if (recipe) {
-        router.db.get("recipes").find({ id }).assign({ order }).write();
-      }
+    const recipe = router.db.get("recipes").find({ id }).value();
+    console.log(router.db.get("recipes"))
+    console.log(router.db.get("recipes").find({ id }))
+    console.log(recipe)
+    if (recipe) {
+      router.db.get("recipes").find({ id }).assign({ order }).write();
+    }
     
 
     res.status(200).json({ message: "Order updated successfully" });
