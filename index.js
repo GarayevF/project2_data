@@ -56,7 +56,7 @@ server.get("/api/sort", (req, res) => {
     const { sortBy, order = "asc" } = req.query; 
 
     if (!sortBy) {
-      return res.status(400).json({ error: "Missing sortBy parameter. Please provide a valid "sort by" value." });
+      return res.status(400).json({ error: 'Missing sortBy parameter. Please provide a valid "sort by" value.' });
     }
 
     const recipes = router.db.get("recipes").value();
