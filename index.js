@@ -3,6 +3,15 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+server.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+
+server.use(middlewares);
+
 server.get("/api/search", (req, res) => {
   const query = req.query.q?.toLowerCase() || ""; 
   const recipes = router.db.get("recipes").value(); 
@@ -139,14 +148,7 @@ server.patch("/api/update-order", (req, res) => {
 
 const port = process.env.PORT || 8080;
 
-server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
-  next();
-});
 
-server.use(middlewares);
 server.use(router);
 
 server.listen(port);
