@@ -102,6 +102,18 @@ server.get("/api/sort", (req, res) => {
   }
 });
 
+server.get("/recipes", (req, res) => {
+  const { page = 1, limit = 10 } = req.query;
+
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + parseInt(limit);
+
+  const recipes = router.db.get("recipes").value();
+  const paginatedRecipes = recipes.slice(startIndex, endIndex);
+
+  res.json(paginatedRecipes);
+});
+
 server.patch("/api/update-order", (req, res) => {
   try {
     const { order } = req.body;
