@@ -147,4 +147,4 @@ app.use(middlewares);
 
 app.use("/api", router);
 
-server.listen(port);
+app.listen(port);
