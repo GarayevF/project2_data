@@ -47,12 +47,7 @@ server.get("/api/filter", (req, res) => {
     const filteredRecipes = recipes.filter((recipe) => {
       const { tags, difficulty } = recipe;
 
-      const matchesTags = tagsQuery
-        ? tagsQuery
-            .split(",")
-            .map((tag) => tag.trim().toLowerCase())
-            .some((tag) => tags?.some((recipeTag) => recipeTag.toLowerCase() === tag))
-        : true;
+      const matchesTags = tags.split(",").some(a => tagsQuery.toLowerCase() == a.toLowerCase())
       
       const matchesDifficulty = difficultyQuery
         ? difficultyQuery.toLowerCase() === difficulty?.toLowerCase()
@@ -92,7 +87,7 @@ server.get("/api/sort", (req, res) => {
           break;
 
         case "date":
-          result = new Date(a.lastUpdated) - new Date(b.lastUpdated);
+          result = new Date(a.date) - new Date(b.date);
           break;
 
         case "tags":
