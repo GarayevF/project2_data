@@ -1,104 +1,353 @@
 {
+  "messages": [
+    {
+      "id": "5258",
+      "subject": "Message 1",
+      "email": "fqarayev97@gmail.com",
+      "message": "message content"
+    }
+  ],
   "recipes": [
   {
-    "id": "1736039260096",
-    "title": "asda",
-    "description": "sad",
-    "ingredients": "sdas",
-    "steps": "dads",
-    "tags": "adsa",
+    "id": "1736002307403",
+    "title": "Pasta Carbonara",
+    "description": "Creamy pasta with eggs, cheese, pancetta, and pepper.",
+    "ingredients": "Pasta, eggs, parmesan cheese, pancetta, black pepper, garlic.",
+    "steps": "1. Boil pasta. 2. Cook pancetta. 3. Mix eggs with cheese. 4. Combine all.",
+    "tags": "Italian, Pasta, Creamy",
     "difficulty": "Medium",
-    "lastUpdated": "1/5/2025, 5:07:40 AM"
+    "date": "1/4/2025, 6:51:47 PM"
   },
   {
-    "id": "1736039264643",
-    "title": "asda",
-    "description": "sa",
-    "ingredients": "dsad",
-    "steps": "asda",
-    "tags": "sdasd",
+    "id": "1736002307404",
+    "title": "Chicken Stir Fry",
+    "description": "A quick and easy stir fry with chicken and vegetables.",
+    "ingredients": "Chicken, bell peppers, onions, soy sauce, garlic, ginger.",
+    "steps": "1. Slice chicken and veggies. 2. Stir fry with soy sauce and spices.",
+    "tags": "Asian, Chicken, Stir Fry",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:52:30 PM"
+  },
+  {
+    "id": "1736002307405",
+    "title": "Spaghetti Bolognese",
+    "description": "Classic Italian pasta with a rich meat sauce.",
+    "ingredients": "Spaghetti, ground beef, tomatoes, garlic, onion, carrots, celery.",
+    "steps": "1. Cook pasta. 2. Make the Bolognese sauce with ground beef.",
+    "tags": "Italian, Pasta, Meat",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 6:53:15 PM"
+  },
+  {
+    "id": "1736002307406",
+    "title": "Vegetable Soup",
+    "description": "Healthy and hearty vegetable soup.",
+    "ingredients": "Carrots, celery, onions, tomatoes, spinach, vegetable broth.",
+    "steps": "1. Chop vegetables. 2. Cook with broth until soft.",
+    "tags": "Vegetarian, Soup, Healthy",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:54:02 PM"
+  },
+  {
+    "id": "1736002307407",
+    "title": "Grilled Cheese Sandwich",
+    "description": "Classic grilled cheese with buttery toasted bread.",
+    "ingredients": "Bread, cheese, butter.",
+    "steps": "1. Butter bread. 2. Grill until golden and melted.",
+    "tags": "Sandwich, Easy, Snack",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:54:45 PM"
+  },
+  {
+    "id": "1736002307408",
+    "title": "Beef Tacos",
+    "description": "Mexican tacos with seasoned beef and toppings.",
+    "ingredients": "Ground beef, taco shells, lettuce, cheese, salsa.",
+    "steps": "1. Cook beef with seasoning. 2. Assemble tacos with toppings.",
+    "tags": "Mexican, Beef, Tacos",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:55:20 PM"
+  },
+  {
+    "id": "1736002307409",
+    "title": "Chicken Caesar Salad",
+    "description": "A classic salad with grilled chicken and Caesar dressing.",
+    "ingredients": "Chicken, lettuce, croutons, parmesan cheese, Caesar dressing.",
+    "steps": "1. Grill chicken. 2. Assemble salad with lettuce and croutons.",
+    "tags": "Salad, Chicken, Healthy",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:56:05 PM"
+  },
+  {
+    "id": "1736002307410",
+    "title": "Fish Tacos",
+    "description": "Crispy fish fillets in soft tacos with fresh toppings.",
+    "ingredients": "Fish fillets, taco shells, cabbage, salsa, lime.",
+    "steps": "1. Fry fish fillets. 2. Assemble tacos with cabbage and salsa.",
+    "tags": "Mexican, Fish, Tacos",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 6:56:50 PM"
+  },
+  {
+    "id": "1736002307411",
+    "title": "Egg Salad",
+    "description": "Creamy egg salad with mayonnaise and mustard.",
+    "ingredients": "Eggs, mayonnaise, mustard, salt, pepper.",
+    "steps": "1. Boil eggs. 2. Mix with mayo and mustard.",
+    "tags": "Salad, Egg, Snack",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:57:30 PM"
+  },
+  {
+    "id": "1736002307412",
+    "title": "Pancakes",
+    "description": "Fluffy pancakes with syrup and butter.",
+    "ingredients": "Flour, eggs, milk, baking powder, syrup, butter.",
+    "steps": "1. Mix ingredients. 2. Cook on a griddle until golden.",
+    "tags": "Breakfast, Sweet, Pancakes",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:58:10 PM"
+  },
+  {
+    "id": "1736002307413",
+    "title": "Chicken Alfredo",
+    "description": "Creamy pasta with grilled chicken and Alfredo sauce.",
+    "ingredients": "Pasta, chicken, heavy cream, parmesan cheese, garlic.",
+    "steps": "1. Cook pasta and chicken. 2. Make Alfredo sauce and combine.",
+    "tags": "Italian, Chicken, Pasta",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 6:58:55 PM"
+  },
+  {
+    "id": "1736002307414",
+    "title": "Vegetable Stir Fry",
+    "description": "A healthy stir fry with mixed vegetables.",
+    "ingredients": "Carrots, bell peppers, broccoli, soy sauce, garlic.",
+    "steps": "1. Slice vegetables. 2. Stir fry with soy sauce.",
+    "tags": "Vegetarian, Stir Fry, Healthy",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 6:59:30 PM"
+  },
+  {
+    "id": "1736002307415",
+    "title": "Hamburgers",
+    "description": "Classic burgers with beef patties and fresh toppings.",
+    "ingredients": "Ground beef, buns, lettuce, tomato, cheese.",
+    "steps": "1. Grill beef patties. 2. Assemble burgers with toppings.",
+    "tags": "American, Burger, Beef",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:00:00 PM"
+  },
+  {
+    "id": "1736002307416",
+    "title": "Lasagna",
+    "description": "Layers of pasta, meat sauce, and cheese.",
+    "ingredients": "Lasagna noodles, ground beef, ricotta, mozzarella, marinara sauce.",
+    "steps": "1. Cook noodles. 2. Layer with sauce and cheese. 3. Bake.",
+    "tags": "Italian, Pasta, Meat",
     "difficulty": "Hard",
-    "lastUpdated": "1/5/2025, 5:07:44 AM"
+    "date": "1/4/2025, 7:00:40 PM"
   },
   {
-    "title": "salam",
-    "description": "jkh",
-    "ingredients": "kjh",
-    "steps": "lkjh",
-    "tags": "salam, qaqas",
-    "difficulty": "Easy",
-    "id": "1736207478868",
-    "lastUpdated": "1/7/2025, 3:51:18 AM"
+    "id": "1736002307417",
+    "title": "Quiche",
+    "description": "Savory pie with eggs, cheese, and vegetables.",
+    "ingredients": "Eggs, cheese, spinach, pie crust, cream.",
+    "steps": "1. Mix eggs with cream and cheese. 2. Bake in pie crust.",
+    "tags": "French, Pie, Egg",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:01:10 PM"
   },
   {
-    "title": "dgdfsg",
-    "description": "dsfg",
-    "ingredients": "dsfgsdf",
-    "steps": "gdsfg",
-    "tags": "sdfgdsfg",
-    "difficulty": "Easy",
-    "id": "1736207820039",
-    "lastUpdated": "1/7/2025, 3:57:00 AM"
+    "id": "1736002307418",
+    "title": "Grilled Salmon",
+    "description": "Deliciously grilled salmon with lemon and herbs.",
+    "ingredients": "Salmon, lemon, garlic, olive oil, rosemary.",
+    "steps": "1. Season salmon with lemon and herbs. 2. Grill until cooked.",
+    "tags": "Fish, Healthy, Grilled",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:01:40 PM"
   },
   {
-    "title": "dsfgs",
-    "description": "dfgsdfg",
-    "ingredients": "dsfgds",
-    "steps": "fgdsgf",
-    "tags": "dsgs",
+    "id": "1736002307419",
+    "title": "Cheese Pizza",
+    "description": "Classic pizza topped with melted cheese and marinara sauce.",
+    "ingredients": "Pizza dough, mozzarella cheese, marinara sauce.",
+    "steps": "1. Roll out dough. 2. Add sauce and cheese. 3. Bake.",
+    "tags": "Italian, Pizza, Cheese",
     "difficulty": "Easy",
-    "id": "1736207824445",
-    "lastUpdated": "1/7/2025, 3:57:04 AM"
+    "date": "1/4/2025, 7:02:10 PM"
   },
   {
-    "title": "dfsg",
-    "description": "dsfg",
-    "ingredients": "sdfgsd",
-    "steps": "gsdfg",
-    "tags": "dsfgdf",
-    "difficulty": "Easy",
-    "id": "1736207828153",
-    "lastUpdated": "1/7/2025, 3:57:08 AM"
+    "id": "1736002307420",
+    "title": "Chicken Wings",
+    "description": "Crispy chicken wings coated in flavorful sauce.",
+    "ingredients": "Chicken wings, hot sauce, butter, garlic.",
+    "steps": "1. Bake or fry wings. 2. Toss in sauce.",
+    "tags": "Snack, Chicken, Wings",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:02:40 PM"
   },
   {
-    "title": "dfsgdfg",
-    "description": "dsfgsd",
-    "ingredients": "fgdsfg",
-    "steps": "sdgfsdfg",
-    "tags": "dsgfsd",
-    "difficulty": "Easy",
-    "id": "1736207832894",
-    "lastUpdated": "1/7/2025, 3:57:12 AM"
+    "id": "1736002307421",
+    "title": "Chicken Parmesan",
+    "description": "Crispy chicken cutlets topped with marinara sauce and melted cheese.",
+    "ingredients": "Chicken, breadcrumbs, marinara sauce, mozzarella cheese, parmesan cheese.",
+    "steps": "1. Bread and fry chicken cutlets. 2. Top with sauce and cheese. 3. Bake.",
+    "tags": "Italian, Chicken, Cheese",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:03:10 PM"
   },
   {
-    "title": "dsfgdsfg",
-    "description": "sdfgsd",
-    "ingredients": "fgdsfg",
-    "steps": "sdgfsdgf",
-    "tags": "dsgfsd",
-    "difficulty": "Easy",
-    "id": "1736207837114",
-    "lastUpdated": "1/7/2025, 3:57:17 AM"
+    "id": "1736002307422",
+    "title": "Crispy Tofu Stir Fry",
+    "description": "Tofu stir-fried with vegetables and soy sauce.",
+    "ingredients": "Tofu, soy sauce, bell peppers, onions, garlic, ginger.",
+    "steps": "1. Fry tofu until crispy. 2. Stir fry vegetables. 3. Combine with tofu and sauce.",
+    "tags": "Vegan, Stir Fry, Healthy",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:03:50 PM"
   },
   {
-    "title": "reger",
-    "description": "gerge",
-    "ingredients": "gerger",
-    "steps": "gerg",
-    "tags": "ergerg",
-    "difficulty": "Easy",
-    "id": "1736207841080",
-    "lastUpdated": "1/7/2025, 3:57:21 AM"
+    "id": "1736002307423",
+    "title": "Pork Schnitzel",
+    "description": "Breaded and fried pork cutlets served with lemon.",
+    "ingredients": "Pork, breadcrumbs, egg, flour, lemon.",
+    "steps": "1. Bread the pork cutlets. 2. Fry until golden. 3. Serve with lemon.",
+    "tags": "German, Pork, Fried",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:04:30 PM"
   },
   {
-    "title": "ergerg",
-    "description": "ergerge",
-    "ingredients": "rgergerg",
-    "steps": "ergerg",
-    "tags": "egrger",
+    "id": "1736002307424",
+    "title": "Mushroom Risotto",
+    "description": "A creamy rice dish made with mushrooms and parmesan.",
+    "ingredients": "Arborio rice, mushrooms, onions, garlic, parmesan, vegetable broth.",
+    "steps": "1. Sauté mushrooms and onions. 2. Add rice and broth. 3. Stir until creamy.",
+    "tags": "Italian, Rice, Vegetarian",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:05:00 PM"
+  },
+  {
+    "id": "1736002307425",
+    "title": "Sushi Rolls",
+    "description": "Homemade sushi rolls with rice, seaweed, and fillings.",
+    "ingredients": "Sushi rice, seaweed, tuna, cucumber, avocado, soy sauce.",
+    "steps": "1. Cook rice and cool. 2. Lay out seaweed, add rice and fillings. 3. Roll and slice.",
+    "tags": "Japanese, Sushi, Rice",
+    "difficulty": "Hard",
+    "date": "1/4/2025, 7:05:40 PM"
+  },
+  {
+    "id": "1736002307426",
+    "title": "Falafel",
+    "description": "Crispy fried balls made from chickpeas and herbs.",
+    "ingredients": "Chickpeas, garlic, parsley, cumin, flour, oil.",
+    "steps": "1. Blend chickpeas and herbs. 2. Form balls and fry.",
+    "tags": "Vegan, Middle Eastern, Snack",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:06:10 PM"
+  },
+  {
+    "id": "1736002307427",
+    "title": "Baked Ziti",
+    "description": "Baked pasta dish with marinara sauce and mozzarella cheese.",
+    "ingredients": "Ziti pasta, marinara sauce, mozzarella, parmesan cheese.",
+    "steps": "1. Cook pasta and mix with sauce. 2. Layer with cheese and bake.",
+    "tags": "Italian, Pasta, Cheese",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:06:40 PM"
+  },
+  {
+    "id": "1736002307428",
+    "title": "Grilled Shrimp",
+    "description": "Shrimp marinated and grilled to perfection.",
+    "ingredients": "Shrimp, garlic, olive oil, lemon, parsley.",
+    "steps": "1. Marinate shrimp with garlic and lemon. 2. Grill until cooked.",
+    "tags": "Seafood, Grilled, Shrimp",
     "difficulty": "Easy",
-    "id": "1736207845704",
-    "lastUpdated": "1/7/2025, 3:57:25 AM"
-  }
+    "date": "1/4/2025, 7:07:10 PM"
+  },
+  {
+    "id": "1736002307429",
+    "title": "Vegan Chili",
+    "description": "Hearty chili made with beans and vegetables.",
+    "ingredients": "Beans, tomatoes, bell peppers, onions, chili powder.",
+    "steps": "1. Cook vegetables. 2. Add beans and spices. 3. Simmer until thick.",
+    "tags": "Vegan, Chili, Healthy",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:07:40 PM"
+  },
+  {
+    "id": "1736002307430",
+    "title": "Beef Stew",
+    "description": "Tender beef simmered with vegetables in a rich broth.",
+    "ingredients": "Beef, carrots, potatoes, onions, beef broth.",
+    "steps": "1. Brown beef. 2. Add vegetables and broth. 3. Simmer until tender.",
+    "tags": "Beef, Stew, Comfort Food",
+    "difficulty": "Hard",
+    "date": "1/4/2025, 7:08:10 PM"
+  },
+  {
+    "id": "1736002307431",
+    "title": "Frittata",
+    "description": "An Italian-style omelette with eggs and vegetables.",
+    "ingredients": "Eggs, spinach, onions, mushrooms, cheese.",
+    "steps": "1. Sauté vegetables. 2. Pour beaten eggs over and cook until set.",
+    "tags": "Eggs, Italian, Breakfast",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:08:40 PM"
+  },
+  {
+    "id": "1736002307432",
+    "title": "Shakshuka",
+    "description": "Poached eggs in a spicy tomato sauce.",
+    "ingredients": "Eggs, tomatoes, onions, garlic, cumin, paprika.",
+    "steps": "1. Cook onions and tomatoes. 2. Crack eggs into sauce and cook until set.",
+    "tags": "Middle Eastern, Eggs, Vegan",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:09:10 PM"
+  },
+  {
+    "id": "1736002307433",
+    "title": "Eggplant Parmesan",
+    "description": "Breaded eggplant slices layered with marinara and mozzarella.",
+    "ingredients": "Eggplant, marinara sauce, mozzarella, parmesan cheese.",
+    "steps": "1. Bread and fry eggplant. 2. Layer with sauce and cheese, then bake.",
+    "tags": "Vegetarian, Italian, Cheese",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:09:40 PM"
+  },
+  {
+    "id": "1736002307434",
+    "title": "Pad Thai",
+    "description": "Stir-fried noodles with shrimp, peanuts, and lime.",
+    "ingredients": "Rice noodles, shrimp, eggs, peanuts, lime, soy sauce.",
+    "steps": "1. Stir fry noodles and shrimp. 2. Add eggs and peanuts.",
+    "tags": "Thai, Noodles, Shrimp",
+    "difficulty": "Medium",
+    "date": "1/4/2025, 7:10:10 PM"
+  },
+  {
+    "id": "1736002307435",
+    "title": "Ceviche",
+    "description": "Fresh fish marinated in lime juice with onions and cilantro.",
+    "ingredients": "Fish, lime juice, onions, cilantro, tomatoes.",
+    "steps": "1. Marinate fish in lime juice. 2. Add onions, tomatoes, and cilantro.",
+    "tags": "Seafood, Mexican, Fresh",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 7:10:40 PM"
+  },
+  {
+    "id": "1736002307436",
+    "title": "Chicken Fried Rice",
+    "description": "Fried rice with chicken, vegetables, and soy sauce.",
+    "ingredients": "Chicken, rice, soy sauce, peas, carrots, eggs.",
+    "steps": "1. Cook chicken and vegetables. 2. Stir fry rice and soy sauce.",
+    "tags": "Asian, Chicken, Rice",
+    "difficulty": "Easy",
+    "date": "1/4/2025, 7:11:10 PM"
+  },
 ]
+
 }
